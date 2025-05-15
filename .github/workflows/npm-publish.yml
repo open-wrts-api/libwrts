@@ -3,9 +3,9 @@
 
 name: publiceren naar npm
 
-on:
-  release:
-    types: [created]
+on: 
+  push
+  workflow_dispatch
 
 jobs:
   build:
