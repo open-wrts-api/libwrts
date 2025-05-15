@@ -1,0 +1,15 @@
+{
+  "name": "libwrts",
+  "version": "1.0.0",
+  "description": "libwrts is een library voor het communiceren met de StudyGo API.",
+  "main": "index.js",
+  "scripts": {
+    "build": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
