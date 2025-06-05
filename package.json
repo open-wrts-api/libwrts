@@ -1,6 +1,6 @@
 {
   "name": "@openwrts/libwrts",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "libwrts is een library voor het communiceren met de StudyGo API.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,10 +22,10 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/user-agents": "^1.0.4",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@types/user-agents": "^1.0.4",
     "user-agents": "^1.1.561"
   }
 }
