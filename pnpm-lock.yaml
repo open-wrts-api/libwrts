@@ -1,68 +1,48 @@
-lockfileVersion: "9.0"
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
 importers:
+
   .:
     dependencies:
-      random-useragent:
-        specifier: ^0.5.0
-        version: 0.5.0
+      user-agents:
+        specifier: ^1.1.561
+        version: 1.1.561
     devDependencies:
-      "@types/random-useragent":
-        specifier: ^0.3.3
-        version: 0.3.3
+      '@types/user-agents':
+        specifier: ^1.0.4
+        version: 1.0.4
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
 
 packages:
-  "@types/random-useragent@0.3.3":
-    resolution:
-      {
-        integrity: sha512-FsJ5opTEaHjWaOcfmA+Y74pNjiO2ggred9W5+e6SDDP7UCWVNFGRZAxIbMRceX0/pnffOt50D9HK+y13CfERcw==,
-      }
 
-  json-stringify-safe@5.0.1:
-    resolution:
-      {
-        integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==,
-      }
+  '@types/user-agents@1.0.4':
+    resolution: {integrity: sha512-AjeFc4oX5WPPflgKfRWWJfkEk7Wu82fnj1rROPsiqFt6yElpdGFg8Srtm/4PU4rA9UiDUZlruGPgcwTMQlwq4w==}
 
-  random-seed@0.3.0:
-    resolution:
-      {
-        integrity: sha512-y13xtn3kcTlLub3HKWXxJNeC2qK4mB59evwZ5EkeRlolx+Bp2ztF7LbcZmyCnOqlHQrLnfuNbi1sVmm9lPDlDA==,
-      }
-    engines: { node: ">= 0.6.0" }
-
-  random-useragent@0.5.0:
-    resolution:
-      {
-        integrity: sha512-FUMkqVdZeoSff5tErNL3FFGYXElDWZ1bEuedhm5u9MdCFwANriJWbHvDRYrLTOzp/fBsBGu5J1cWtDgifa97aQ==,
-      }
+  lodash.clonedeep@4.5.0:
+    resolution: {integrity: sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==}
 
   typescript@5.8.3:
-    resolution:
-      {
-        integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==,
-      }
-    engines: { node: ">=14.17" }
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
     hasBin: true
 
+  user-agents@1.1.561:
+    resolution: {integrity: sha512-HetbdjLL+7+dnEFVKE+6qm2k8hK4oGM9ihOasAFkqQn2+8xC0guyO0q2Uv4IlTtsJ9f0sGZb1H/OwkAggZxjxA==}
+
 snapshots:
-  "@types/random-useragent@0.3.3": {}
 
-  json-stringify-safe@5.0.1: {}
+  '@types/user-agents@1.0.4': {}
 
-  random-seed@0.3.0:
-    dependencies:
-      json-stringify-safe: 5.0.1
-
-  random-useragent@0.5.0:
-    dependencies:
-      random-seed: 0.3.0
+  lodash.clonedeep@4.5.0: {}
 
   typescript@5.8.3: {}
+
+  user-agents@1.1.561:
+    dependencies:
+      lodash.clonedeep: 4.5.0

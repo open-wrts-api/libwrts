@@ -1,5 +1,4 @@
-import { getRandom } from 'random-useragent';
-
+import UserAgent from 'user-agents';
 function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
         (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
@@ -52,10 +51,11 @@ export async function getToken(email: string, password: string) {
      *     "renew_from": 1748175956
      * }
      */
+    const userAgent = new UserAgent();
     const resp = await fetch("https://api.wrts.nl/api/v3/auth/get_token", {
         "credentials": "omit",
         "headers": {
-            "User-Agent": getRandom(),
+            "User-Agent": userAgent.toString(),
             "Accept": "application/json, text/plain, */*",
             "Accept-Language": "en-US,en;q=0.5",
             "Content-Type": "application/json",
