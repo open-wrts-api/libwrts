@@ -1,3 +1,11 @@
+import { getRandom } from 'random-useragent';
+
+function uuidv4() {
+    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+        (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+    );
+}
+
 export type tokenData = {
     token: string,
     expires_at: number,
@@ -46,8 +54,24 @@ export async function getToken(email: string, password: string) {
      */
     const resp = await fetch("https://api.wrts.nl/api/v3/auth/get_token", {
         "credentials": "omit",
+        "headers": {
+            "User-Agent": getRandom(),
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Content-Type": "application/json",
+            "X-Client-Type": "web",
+            "X-Language-Code": "nl",
+            "X-Locale-Code": "nl-NL",
+            "X-Session-Id": uuidv4(),
+            "X-Device-Id": uuidv4(),
+            "Sec-GPC": "1",
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "cross-site",
+            "Priority": "u=0"
+        },
         "referrer": "https://studygo.com/",
-        "body": `{"email":${email},"password":${password}}`,
+        "body": "{\"email\":\"" + email + "\",\"password\":\"" + password + "\"}",
         "method": "POST",
         "mode": "cors"
     });

@@ -1,6 +1,6 @@
 {
   "name": "@openwrts/libwrts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "libwrts is een library voor het communiceren met de StudyGo API.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,11 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "keywords": ["studygo", "api", "wrts"],
+  "keywords": [
+    "studygo",
+    "api",
+    "wrts"
+  ],
   "author": "andrei1010",
   "license": "GPL-3.0-only",
   "files": [
@@ -18,6 +22,10 @@
     "access": "public"
   },
   "devDependencies": {
+    "@types/random-useragent": "^0.3.3",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "random-useragent": "^0.5.0"
   }
 }
