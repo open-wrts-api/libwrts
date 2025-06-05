@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build && pnpm i --save-dev @types/user-agents"
+    "prepare": "npm run build"
   },
   "keywords": [
     "studygo",
