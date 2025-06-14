@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && rollup -c",
     "prepare": "npm run build"
   },
   "keywords": [
@@ -22,6 +22,10 @@
     "access": "public"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.5",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^4.43.0",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
